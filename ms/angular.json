@@ -32,7 +32,7 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": ["/node_modules/webgazer/dist/webgazer.js"]
           },
           "configurations": {
             "production": {
@@ -97,5 +97,12 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
-}
+ }
+ 
+ 
+ 
+ 
