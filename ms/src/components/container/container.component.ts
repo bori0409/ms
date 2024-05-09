@@ -10,8 +10,21 @@ import webgazer from 'webgazer';
 })
 export class ContainerComponent implements OnInit{
   ngOnInit(): void {
-console.log('webgazer', webgazer);
+    console.log('Webgazer', webgazer);
+    webgazer.setRegression('ridge').setGazeListener(function(data:any, elapsedTime:any) {
+      console.log(data); //elapsed time is based on time since begin was called
+      console.log(data);
+      var prediction = webgazer.getCurrentPrediction();
+      if (prediction) {
+        var x = prediction.x;
+        var y = prediction.y;
+        console.log(prediction)
+      }
+      
+    }).begin();
 
+    webgazer.showPredictionPoints(true);
   }
+ 
 
 }
