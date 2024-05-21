@@ -1,1 +1,70 @@
 <p>container works!</p>
+
+<div style="  width: 100%;
+height: 100%; /* Make container div take up full height of the viewport */
+display: flex;
+justify-content: center; /* Centers items horizontally */
+align-items: center; /* Centers items vertically */
+background-color: #000531; /* Background color for the container */
+">
+
+<div class="CalibrateContainer">
+    @if (calibrationComplete==false){
+    @if (startedCalibration==false){
+        <h2 style="color: white;">Need to calibrate first</h2>
+        <button (click)="calibration()" class="buttona">Start calibration!</button>
+    }
+    @if (startedCalibration==true && isCalibrated==false ){
+        @if(calibrateStep==1){
+            <button (click)="calibrationStepMore()" class="buttona">Click me!</button>
+        } 
+        @if(calibrateStep==2){
+            <button (click)="calibrationStepMore()" class="buttona">Click me too!</button>
+        }
+        @if(calibrateStep==3){
+            <button (click)="calibrationStepMore()" class="buttona">Click me too!</button>
+        }
+        
+        @if(calibrateStep==4){
+            <button (click)="calibrationStepMore()" class="buttona">Click me too!</button>
+        }
+        @if(calibrateStep==5){
+            <button (click)="calibrationStepMore()" class="buttona">Click me too!</button>
+        }
+        @if(calibrateStep==6){
+            <button (click)="calibrationStepMore()" class="buttona">Click me too!</button>
+        }
+    }}
+    <div  class="start">
+   
+</div>
+
+</div>
+<div> 
+    @if(recording==false){
+        <button (click)="generateHeatmap()" class="buttona">map</button>
+    
+        <button (click)="startChoice()" class="buttona">Next</button>
+        <div class="heatmapps"> 
+            <p>HEATMAAAAAAAAAP</p>
+            <div #map class="heatmap">
+                <canvas> </canvas>
+            </div>
+            <div id="heatmapContainer"></div>
+        </div>
+    } 
+</div>
+<div class="pictures">
+    @if (calibrationComplete==true && recording==true){
+        <img  style=" max-width: 300px;
+        height: auto;" (click)="pictureClicked(allImageUrls[numbers[0]].id)" [src]="allImageUrls[numbers[0]].url" >
+        <img (click)="pictureClicked(allImageUrls[numbers[1]].id)" [src]="allImageUrls[numbers[1]].url" >
+        
+            
+      
+}
+</div>
+
+</div>
+
+<button mat-flat-button></button>

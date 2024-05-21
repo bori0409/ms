@@ -4,3 +4,41 @@
     height: 100vh;
     background-color: #fad7d7;
 }
+
+.buttona {
+    background-color: #04AA6D; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
+  .calibrateContainer{
+    
+display: flex;
+justify-content: center; /* Centers items horizontally */
+align-items: center; /* Centers items vertically */
+  }
+  .buttona:hover {
+    background-color: #008353; /* Green */
+  }
+
+  .pictures {
+    display: flex; 
+    justify-content: space-around; 
+    margin-bottom: 20px;
+}
+
+.pictures > * {
+    margin-right: 300px;
+}
+
+.pictures > *:last-child {
+    margin-right: 0; /* Remove margin for the last item */
+}
+.heatmap {
+    width: 800px;
+    height: 600px;
+  }
